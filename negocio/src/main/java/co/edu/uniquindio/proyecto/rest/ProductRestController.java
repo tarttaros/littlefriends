@@ -39,4 +39,13 @@ public class ProductRestController {
             return new ResponseEntity<String>(HttpStatus.EXPECTATION_FAILED);
         }
     }
+
+    @GetMapping("/melo")
+    public ResponseEntity melo() throws Exception {
+        try {
+            return ResponseEntity.ok("melo");
+        }catch (Exception e) {
+            return new ResponseEntity<String>(HttpStatus.EXPECTATION_FAILED);
+        }
+    }
 }

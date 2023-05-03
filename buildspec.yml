@@ -1,6 +1,14 @@
 version: 0.2
 
 phases:
+  install:
+    commands:
+      - echo Installing Maven
+      - apt-get update && apt-get install -y maven
+  pre_build:
+    commands:
+      - echo "Downloading application dependencies..."
+      - mvn clean install
   build:
     commands:
       - echo Entered the build phase...
@@ -11,5 +19,4 @@ phases:
 artifacts:
   files:
     - negocio/target/littlefriends1.jar
-    - persistencia/target/littlefriends2.jar
   discard-paths: yes
