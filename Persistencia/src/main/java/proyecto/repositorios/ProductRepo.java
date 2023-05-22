@@ -21,6 +21,10 @@ public interface ProductRepo extends JpaRepository<Product,Integer> {
     @Query("select pi from ProductImage pi where pi.product.id=:id")
     List<ProductImage> getProductImageByIdProduct(Integer id);
 
+    @Query("select p from Product p where p.description = ?1")
+    Product getProductByDescription(String desc);
+
     @Query("select pc.category from ProductCategory pc where pc.product.id=:id")
     List<Category> getCategoryByIdProduct(Integer id);
+
 }

@@ -20,14 +20,6 @@ import java.util.List;
 public class Product implements Serializable
 {
     //Llave primaria de la entidad
-
-    public Product(String nameProduct, String description, Integer quantityProduct, double price) {
-        this.nameProduct = nameProduct;
-        this.description = description;
-        this.quantityProduct = quantityProduct;
-        this.price = price;
-    }
-
     @Id
     @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -56,6 +48,21 @@ public class Product implements Serializable
     @Positive(message = "El precio debe ser positivo")
     private double price;
 
+    public Product(String nameProduct, String description, Integer quantityProduct, double price) {
+        this.nameProduct = nameProduct;
+        this.description = description;
+        this.quantityProduct = quantityProduct;
+        this.price = price;
+    }
+
+    public Product(Integer id, String nameProduct, String description, Integer quantityProduct, double price) {
+        this.id = id;
+        this.nameProduct = nameProduct;
+        this.description = description;
+        this.quantityProduct = quantityProduct;
+        this.price = price;
+    }
+
     //Relaciones
 
     //lista de detalles compra
@@ -76,4 +83,19 @@ public class Product implements Serializable
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "product",cascade = CascadeType.ALL)
     List<ProductCategory> productCategories;
 
+    public String getNameProduct() {
+        return nameProduct;
+    }
+
+    public void setNameProduct(String nameProduct) {
+        this.nameProduct = nameProduct;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }

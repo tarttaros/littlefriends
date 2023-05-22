@@ -35,7 +35,7 @@ public class Pet implements Serializable
     @Column(nullable = false)
     private LocalDate birthdate;
 
-    //condicion de la mascota (hospitalizada , guarderia, )
+    //condicion de la mascota (casa)
     @Column(name = "status", nullable = false)
     private Integer status;
 

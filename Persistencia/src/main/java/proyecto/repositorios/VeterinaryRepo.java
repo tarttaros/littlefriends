@@ -1,6 +1,5 @@
 package proyecto.repositorios;
 
-
 import org.springframework.stereotype.Repository;
 import proyecto.entidades.Veterinary;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -16,4 +15,8 @@ public interface VeterinaryRepo extends JpaRepository<Veterinary,Integer> {
 
     @Query("select v from Veterinary v where v.email = ?1 and v.password = ?2")
     Optional<Veterinary> findByEmailAndPassword(String email, String password);
+
+    @Query("select v from Veterinary v where v.identification = ?1")
+    Veterinary getByIdentification(String identification);
+
 }

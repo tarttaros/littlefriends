@@ -35,13 +35,25 @@ public class Pet implements Serializable
     @Column(nullable = false)
     private LocalDate birthdate;
 
-    //condicion de la mascota (hospitalizada , guarderia, )
+    //condicion de la mascota (casa)
     @Column(name = "status", nullable = false)
-    private Integer status;
+    private PetStatus status;
+
+    @Column(name = "type", nullable = false)
+    private TypePet typePet;
 
     //Sexo de la mascota (macho, hembra, no especificado)
     @Column(name = "sex", nullable = false)
     private Integer sex;
+
+    public Pet(String name, LocalDate birthdate, PetStatus status, Integer sex, User user, TypePet typePet) {
+        this.name = name;
+        this.birthdate = birthdate;
+        this.status = status;
+        this.sex = sex;
+        this.user = user;
+        this.typePet = typePet;
+    }
 
     //Relaciones
 
@@ -50,11 +62,12 @@ public class Pet implements Serializable
     @JoinColumn(name = "id_user")
     private User user;
 
+    /*
     //Atributo id de la mascota
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_type_pet")
     private TypePet typePet;
-
+    */
     //lista de atenciones
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "pet",cascade = CascadeType.ALL)
     private List<VeterinaryCare> veterinaryCares;

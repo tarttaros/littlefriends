@@ -20,17 +20,23 @@ import java.util.List;
 public class User extends Person implements Serializable
 {
     //Llave primaria de la entidad
-    @JsonIgnore
+  //  @JsonIgnore
     @Id
     @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_user")
-    private Integer id;
+    private Integer id_user;
 
     public User(@Length(min = 2, max = 80, message = "El nombre debe tener mínimo 2 caracteres y máximo 80") @NotBlank(message = "El campo está vacío, debe ingresar un nombre") String name, @Length(min = 5, max = 17, message = "El telefono debe tener mínimo 5 caracteres y máximo 17") @NotBlank(message = "El campo está vacío, debe ingresar un telefono") String phoneNumber, @Length(min = 5, max = 10, message = "La cedula debe tener mínimo 5 caracteres y máximo 10") @NotBlank(message = "El campo está vacío, debe ingresar la cedula") String identification, @Email(message = "Ingrese un correo válido") @NotBlank(message = "El campo correo no debe estar vacío") String email, String photo_url, Integer sex, @NotBlank(message = "El campo está vacío, debe ingresar la contrasena") String password, LocalDateTime creationDate) {
         super(name, phoneNumber, identification, email, photo_url, sex, password, creationDate);
     }
-//Pelaciones
+
+    public User(@Length(min = 2, max = 80, message = "El nombre debe tener mínimo 2 caracteres y máximo 80") @NotBlank(message = "El campo está vacío, debe ingresar un nombre") String name, @Length(min = 5, max = 17, message = "El telefono debe tener mínimo 5 caracteres y máximo 17") @NotBlank(message = "El campo está vacío, debe ingresar un telefono") String phoneNumber, @Length(min = 5, max = 10, message = "La cedula debe tener mínimo 5 caracteres y máximo 10") @NotBlank(message = "El campo está vacío, debe ingresar la cedula") String identification, @Email(message = "Ingrese un correo válido") @NotBlank(message = "El campo correo no debe estar vacío") String email, String photoUrl, Integer sex, @NotBlank(message = "El campo está vacío, debe ingresar la contrasena") String password, LocalDateTime creationDate, Integer id) {
+        super(name, phoneNumber, identification, email, photoUrl, sex, password, creationDate);
+        this.id_user = id;
+    }
+
+    //Pelaciones
 
     //lista de chats
     @JsonIgnore
