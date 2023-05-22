@@ -32,6 +32,11 @@ public class Category implements Serializable
     @NotBlank(message = "El campo está vacío, debe ingresar una descripcion")
     private String description;
 
+    public Category(Integer id, String description) {
+        this.id = id;
+        this.description = description;
+    }
+
     //Relaciones
 
     //lista de categorias producto

@@ -8,7 +8,7 @@ D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\r
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\repositorios\TokenRepo.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\entidades\Chat.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\repositorios\CategoryRepo.java
-D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\repositorios\TypePetRepo.java
+D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\repositorios\VeterinaryCareRepo.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\repositorios\AdminRepo.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\entidades\PetStatus.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\entidades\Veterinary.java
@@ -17,12 +17,13 @@ D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\e
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\entidades\ResponseMessage.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\repositorios\ProductCategoryRepo.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\entidades\Token.java
-D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\entidades\TypePet1.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\dtos\VeterinaryDTO.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\entidades\ProductCategory.java
+D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\repositorios\PurchaseRepo.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\entidades\Purchase.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\repositorios\Repository.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\dtos\ReportProductDTO.java
+D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\repositorios\PurchaseDetailRepo.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\entidades\LogicException.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\repositorios\UserRepo.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\entidades\Examination.java
@@ -39,3 +40,4 @@ D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\e
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\entidades\TypeMedicalConsultation.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\dtos\ProductDTO.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\repositorios\ConsultationRepo.java
+D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\repositorios\TypeMedicalConsultationRepo.java
