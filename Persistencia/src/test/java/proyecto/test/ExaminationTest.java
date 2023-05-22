@@ -8,8 +8,6 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.jdbc.Sql;
 import proyecto.entidades.Examination;
-import proyecto.entidades.Purchase;
-import proyecto.entidades.PurchaseDetail;
 import proyecto.repositorios.ExaminationRepo;
 
 import java.util.List;
