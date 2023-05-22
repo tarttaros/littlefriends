@@ -9,7 +9,6 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.jdbc.Sql;
 import proyecto.entidades.*;
 import proyecto.repositorios.PetRepo;
-import proyecto.repositorios.TypePetRepo;
 import proyecto.repositorios.UserRepo;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -21,9 +20,6 @@ public class PetTest {
 
     @Autowired
     private UserRepo userRepo;
-
-    @Autowired
-    private TypePetRepo typePetRepo;
 
     @Autowired
     private PetRepo petRepo;
@@ -63,49 +59,8 @@ public class PetTest {
     @Test
     @Sql("classpath:Pets.sql")
     public void eliminarPetTest(){
-/*
-        TypePet tp = new TypePet(1,"perro");
-
-        TypePet typepet = typePetRepo.save(tp);
-
-        User user = new User(
-                "Andres carrillo",
-                "3138545796",
-                "1905541001",
-                "andres@gmail.com",
-                "imagen1",
-                1,
-                "147851",
-                LocalDateTime.now(),
-                1);
-
-        User usr = userRepo.save(user);
-
-        Pet pet = new Pet(
-                1,
-                "pepito",
-                LocalDate.now(),
-                1,
-                1,
-                userRepo.getById(1),
-                typePetRepo.getById(1));
-
-        //Guardamos el registro
-        Pet guardado = petRepo.save(pet);
-
-        //Luego lo eliminamos
-        petRepo.delete(guardado);
-
-        //Luego lo eliminamos
-        typePetRepo.delete(typepet);
-
-        //Luego lo eliminamos
-        userRepo.delete(usr);
-*/
 
         Pet pet = petRepo.getPetByName("pepito");
-
-        System.out.println(pet.getName());
 
         //Luego lo eliminamos
         petRepo.delete(pet);
