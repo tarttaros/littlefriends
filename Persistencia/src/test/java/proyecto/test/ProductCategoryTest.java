@@ -44,4 +44,51 @@ public class ProductCategoryTest {
         Assertions.assertNotNull(guardado);
     }
 
+    @Test
+    @Sql("classpath:ProductCategories.sql")
+    public void eliminarProductCategoryTest(){
+        ProductCategory consult = productCategoryRepo.findById(1).orElse(null);
+
+        //Luego lo eliminamos
+        productCategoryRepo.delete(consult);
+
+        //Por último, verificamos que si haya quedado borrado
+        ProductCategory buscado = productCategoryRepo.findById(1).orElse(null);
+        Assertions.assertNull(buscado);
+    }
+
+    @Test
+    @Sql("classpath:ProductCategories.sql")
+    public void actualizarProductCategoryTest(){
+        //recuperamos el registro
+        ProductCategory guardado = productCategoryRepo.findById(1).orElse(null);
+
+        Category cat = categoryRepo.findByName("Antidepresivo");
+
+        //Modificamos el nombre
+        guardado.setCategory(cat);
+
+        //Con save guardamos el registro modificado
+        productCategoryRepo.save(guardado);
+
+        //Por último, verificamos que si haya quedado actualizado
+        ProductCategory buscado = productCategoryRepo.findById(1).orElse(null);
+        Assertions.assertEquals("Antidepresivo", buscado.getCategory().getDescription());
+    }
+
+    @Test
+    @Sql("classpath:ProductCategories.sql")
+    public void listarProductCategoryTest() {
+        //Obtenemos la lista de todos los usuarios
+        List<ProductCategory> lista = productCategoryRepo.findAll();
+
+        //Imprimimos la lista
+        for (ProductCategory prodctCat : lista)
+        {
+            System.out.println(
+                    prodctCat.getId()+"\n"+
+                    prodctCat.getCategory().getDescription()+"\n"+
+                    prodctCat.getProduct().getNameProduct());
+        }
+    }
 }
