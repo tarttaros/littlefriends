@@ -20,6 +20,8 @@ public class UserTest {
     @Autowired
     private UserRepo userRepo;
 
+
+
     @Test
     public void registrarUsuarioTest(){
         User u = new User(
@@ -98,4 +100,6 @@ public class UserTest {
         //Imprimimos la lista
         System.out.println(lista);
     }
+
+
 }
