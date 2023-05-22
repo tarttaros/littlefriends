@@ -15,6 +15,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+
+// clase que almacena la informacion de una cita por parte del veterinario, Historia clinica
 public class VeterinaryCare implements Serializable
 {
     //Atributo id atencion veterinaria
