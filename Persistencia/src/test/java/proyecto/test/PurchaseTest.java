@@ -49,7 +49,7 @@ public void eliminarPurchaseTest(){
 
     @Test
     @Sql("classpath:Purchases.sql")
-    public void actualizarUsuarioTestSql(){
+    public void actualizarPurchaseTestSql(){
 
         Purchase p=purchaseRepo.findById(1).orElse(null);
 
