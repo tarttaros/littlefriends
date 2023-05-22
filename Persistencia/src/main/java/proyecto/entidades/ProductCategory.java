@@ -26,6 +26,8 @@ public class ProductCategory implements Serializable {
     @Column(name = "id_product_category")
     private Integer id;
 
+    //Relaciones
+
     @JsonIgnore
     @ToString.Exclude
     @ManyToOne(fetch = FetchType.LAZY)
