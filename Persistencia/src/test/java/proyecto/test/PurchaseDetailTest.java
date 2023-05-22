@@ -20,8 +20,6 @@ public class PurchaseDetailTest {
     @Autowired
     private PurchaseDetailRepo purchaseDetailRepo;
 
-
-
     @Test
     public void registrarPurchaseDetailTest(){
 
@@ -30,7 +28,7 @@ public class PurchaseDetailTest {
         pd.setPrice(25000.0);
         pd.setUnits(25);
 
-        PurchaseDetail pd2=purchaseDetailRepo.save(pd);
+        PurchaseDetail pd2 = purchaseDetailRepo.save(pd);
         Assertions.assertNotNull(pd2);
     }
 
@@ -43,6 +41,7 @@ public class PurchaseDetailTest {
         Assertions.assertNull(pd);
 
     }
+
     @Test
     @Sql("classpath:PurchaseDetails.sql")
     public void actualizarPurchseDetailTestSql(){
@@ -58,6 +57,7 @@ public class PurchaseDetailTest {
         Assertions.assertEquals(80,purchaseDetilBuscado.getUnits());
 
     }
+
     @Test
     @Sql("classpath:PurchaseDetails.sql")
     public void listarPurchaseDetailTestSql(){
