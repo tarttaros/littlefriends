@@ -39,6 +39,7 @@ proyecto\entidades\TypeMedicalConsultation.class
 proyecto\dtos\VeterinaryDTO.class
 proyecto\entidades\User.class
 proyecto\repositorios\ExaminationRepo.class
+proyecto\repositorios\MessageRepo.class
 proyecto\repositorios\CategoryRepo.class
 proyecto\PersistenceApplication.class
 proyecto\repositorios\ProductRepo.class

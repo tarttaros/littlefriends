@@ -10,12 +10,10 @@ D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquind
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\repositorios\AdminRepo.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\rest\ProductRestController.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\servicios\ConsultationService.java
-D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\servicios\TokenService.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\servicios\VeterinaryServiceImpl.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\entidades\Veterinary.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\entidades\ResponseMessage.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\dtos\VeterinaryDTO.java
-D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\repositorios\TokenRepo.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\entidades\ProductImage.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\repositorios\PetRepo.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\servicios\CategoryServiceImp.java
@@ -28,9 +26,9 @@ D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquind
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\entidades\TypeMedicalConsultation.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\repositorios\CategoryRepo.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\rest\VeterinaryRestController.java
-D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\rest\TokenController.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\entidades\Consultation.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\servicios\AdminService.java
+D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\dtos\CategoryDTO.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\entidades\Purchase.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\servicios\UserService.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\entidades\PetStatus.java
@@ -57,9 +55,7 @@ D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquind
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\repositorios\ConsultationRepo.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\WebConfig.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\servicios\ReportsService.java
-D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\entidades\Token.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\entidades\PurchaseDetail.java
-D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\servicios\TokenServiceImp.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\dtos\ReportProductDTO.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\entidades\Product.java
 D:\proyecto software3\logica\littlefriends\negocio\src\main\java\co\edu\uniquindio\proyecto\segurity\Cookies.java

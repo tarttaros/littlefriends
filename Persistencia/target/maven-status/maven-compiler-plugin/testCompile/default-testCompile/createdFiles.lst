@@ -1,6 +1,7 @@
 proyecto\test\TypeMedicalConsultationTest.class
 proyecto\test\ChatTest.class
 proyecto\test\ExaminationTest.class
+proyecto\test\MessageTest.class
 proyecto\test\ProductTest.class
 proyecto\test\VeterinaryTest.class
 proyecto\test\PurchaseTest.class

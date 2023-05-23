@@ -1,12 +1,10 @@
 package co.edu.uniquindio.proyecto.servicios;
 
 import co.edu.uniquindio.proyecto.entidades.Pet;
-import co.edu.uniquindio.proyecto.entidades.Token;
 import co.edu.uniquindio.proyecto.entidades.User;
 import org.springframework.stereotype.Service;
 import co.edu.uniquindio.proyecto.repositorios.UserRepo;
 
-import java.util.Calendar;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
