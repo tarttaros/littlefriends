@@ -62,12 +62,6 @@ public class Pet implements Serializable
     @JoinColumn(name = "id_user")
     private User user;
 
-    /*
-    //Atributo id de la mascota
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_type_pet")
-    private TypePet typePet;
-    */
     //lista de atenciones
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "pet",cascade = CascadeType.ALL)
     private List<VeterinaryCare> veterinaryCares;
