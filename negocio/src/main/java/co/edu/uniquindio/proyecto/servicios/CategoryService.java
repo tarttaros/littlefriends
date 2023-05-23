@@ -1,5 +1,6 @@
 package co.edu.uniquindio.proyecto.servicios;
 
+import co.edu.uniquindio.proyecto.dtos.CategoryDTO;
 import co.edu.uniquindio.proyecto.entidades.Category;
 
 import java.util.List;

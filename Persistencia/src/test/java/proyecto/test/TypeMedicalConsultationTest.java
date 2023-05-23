@@ -1,5 +1,6 @@
 package proyecto.test;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,6 +68,9 @@ public class TypeMedicalConsultationTest {
     public void listarTypeMedicalConsultationtest(){
         //Obtenemos la lista de todos los usuarios
         List<TypeMedicalConsultation> lista = typeMedicalConsultationRepo.findAll();
+
+        // Verificamos que la lista no esté vacía
+        Assert.assertFalse("La lista de tipos de consultas medicas está vacía", lista.isEmpty());
 
         System.out.println(lista);
     }

@@ -1,5 +1,6 @@
 package proyecto.test;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,6 +67,9 @@ public class CategoryTest {
 
         //Obtenemos la lista de todos los usuarios
         List<Category> lista = categoryRepo.findAll();
+
+        // Verificamos que la lista no esté vacía
+        Assert.assertFalse("La lista de categorias está vacía", lista.isEmpty());
 
         //Imprimimos la lista
         System.out.println(lista);

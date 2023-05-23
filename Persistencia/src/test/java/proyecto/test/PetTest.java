@@ -1,6 +1,7 @@
 package proyecto.test;
 
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -94,6 +95,9 @@ public class PetTest {
 
         //Obtenemos la lista de todos los usuarios
         List<Pet> lista = petRepo.findAll();
+
+        // Verificamos que la lista no esté vacía
+        Assert.assertFalse("La lista de mascotas está vacía", lista.isEmpty());
 
         //Imprimimos la lista
         System.out.println(lista);

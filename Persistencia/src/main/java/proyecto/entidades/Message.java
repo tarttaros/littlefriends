@@ -28,7 +28,7 @@ public class Message implements Serializable
     @Column(nullable = false,length = 500)
     @Length(min = 1, max = 500, message = "El mensaje debe tener mínimo 1 caracteres y máximo 500")
     @NotBlank(message = "El campo está vacío, ingresar un mensaje a enviar")
-    private String message;
+    private String content;
 
     //Atributo fecha del mensaje
     @Column(nullable = false)

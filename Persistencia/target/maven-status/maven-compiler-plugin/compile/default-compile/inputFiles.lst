@@ -3,6 +3,7 @@ D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\e
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\repositorios\PetRepo.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\entidades\Admin.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\entidades\User.java
+D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\repositorios\ChatRepo.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\repositorios\ExaminationRepo.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\repositorios\ProductRepo.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\repositorios\ProductImageRepo.java
@@ -28,6 +29,7 @@ D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\r
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\entidades\LogicException.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\repositorios\UserRepo.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\entidades\Examination.java
+D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\repositorios\MessageRepo.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\entidades\PurchaseDetail.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\entidades\Pet.java
 D:\proyecto software3\logica\littlefriends\Persistencia\src\main\java\proyecto\entidades\Product.java

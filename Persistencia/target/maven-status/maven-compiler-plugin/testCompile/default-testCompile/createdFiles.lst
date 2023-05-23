@@ -1,5 +1,7 @@
 proyecto\test\TypeMedicalConsultationTest.class
+proyecto\test\ChatTest.class
 proyecto\test\ExaminationTest.class
+proyecto\test\MessageTest.class
 proyecto\test\ProductTest.class
 proyecto\test\VeterinaryTest.class
 proyecto\test\PurchaseTest.class
@@ -10,4 +12,5 @@ proyecto\test\ProductCategoryTest.class
 proyecto\test\VeterinaryCareTest.class
 proyecto\test\PetTest.class
 proyecto\test\UserTest.class
+proyecto\test\AdministradorTest.class
 proyecto\test\ConsultationTest.class
