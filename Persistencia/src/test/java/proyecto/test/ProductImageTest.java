@@ -19,7 +19,7 @@ public class ProductImageTest {
     private ProductImageRepo productImageRepo;
 
     @Test
-    public void registrarproductImageTest(){
+    void registrarproductImageTest(){
 
         ProductImage pi = new ProductImage();
         pi.setId(1);
@@ -31,7 +31,7 @@ public class ProductImageTest {
 
     @Test
     @Sql("classpath:ProductImages.sql")
-    public void eliminarproductImageTest(){
+    void eliminarproductImageTest(){
 
         productImageRepo.deleteById(1);
         ProductImage pi= productImageRepo.findById(1).orElse(null);
@@ -40,7 +40,7 @@ public class ProductImageTest {
 
     @Test
     @Sql("classpath:ProductImages.sql")
-    public void actualizarproductImageTestSql(){
+    void actualizarproductImageTestSql(){
 
         ProductImage pi= productImageRepo.findById(1).orElse(null);
 
@@ -56,7 +56,7 @@ public class ProductImageTest {
 
     @Test
     @Sql("classpath:ProductImages.sql")
-    public void listarImageTestSql(){
+    void listarImageTestSql(){
 
         List<ProductImage> listaimage=productImageRepo.findAll();
 

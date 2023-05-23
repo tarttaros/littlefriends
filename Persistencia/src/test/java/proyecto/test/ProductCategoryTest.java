@@ -28,7 +28,7 @@ public class ProductCategoryTest {
     private ProductCategoryRepo productCategoryRepo;
 
     @Test
-    public void registrarProductCategoryTest(){
+    void registrarProductCategoryTest(){
 
         Category cat = new Category(2,"Antidepresivo");
 
@@ -46,7 +46,7 @@ public class ProductCategoryTest {
 
     @Test
     @Sql("classpath:ProductCategories.sql")
-    public void eliminarProductCategoryTest(){
+    void eliminarProductCategoryTest(){
         ProductCategory consult = productCategoryRepo.findById(1).orElse(null);
 
         //Luego lo eliminamos
@@ -59,7 +59,7 @@ public class ProductCategoryTest {
 
     @Test
     @Sql("classpath:ProductCategories.sql")
-    public void actualizarProductCategoryTest(){
+    void actualizarProductCategoryTest(){
         //recuperamos el registro
         ProductCategory guardado = productCategoryRepo.findById(1).orElse(null);
 
@@ -78,7 +78,7 @@ public class ProductCategoryTest {
 
     @Test
     @Sql("classpath:ProductCategories.sql")
-    public void listarProductCategoryTest() {
+    void listarProductCategoryTest() {
         //Obtenemos la lista de todos los usuarios
         List<ProductCategory> lista = productCategoryRepo.findAll();
 

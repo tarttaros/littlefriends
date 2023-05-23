@@ -22,7 +22,7 @@ public class VeterinaryTest {
     private VeterinaryRepo veterinaryRepo;
 
     @Test
-    public void registrarVeterinarioTest(){
+    void registrarVeterinarioTest(){
         Veterinary u = new Veterinary(
                 "josh",
                 "3108447302",
@@ -41,7 +41,7 @@ public class VeterinaryTest {
     }
 
     @Test
-    public void eliminarVeterinarioTest(){
+    void eliminarVeterinarioTest(){
         Veterinary u = new Veterinary(
                 "josh",
                 "3108447302",
@@ -63,7 +63,7 @@ public class VeterinaryTest {
     }
 
     @Test
-    public void actualizarVeterinarioTest(){
+    void actualizarVeterinarioTest(){
         Veterinary u = new Veterinary(
                 "josh",
                 "3108447302",
@@ -88,7 +88,7 @@ public class VeterinaryTest {
 
     @Test
     @Sql("classpath:Veterinaries.sql" )
-    public void listarVeterinariosTest(){
+    void listarVeterinariosTest(){
         //Obtenemos la lista de todos los usuarios
         List<Veterinary> lista = veterinaryRepo.findAll();
 

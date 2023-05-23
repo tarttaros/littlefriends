@@ -20,7 +20,7 @@ public class TypeMedicalConsultationTest {
     private TypeMedicalConsultationRepo typeMedicalConsultationRepo;
 
     @Test
-    public void registrarTypeMedicalConsultationTest(){
+    void registrarTypeMedicalConsultationTest(){
 
         TypeMedicalConsultation tyMConsult = new TypeMedicalConsultation();
         tyMConsult.setId(1);
@@ -35,7 +35,7 @@ public class TypeMedicalConsultationTest {
 
     @Test
     @Sql("classpath:TypeMedicalConsultations.sql")
-    public void eliminarTypeMedicalConsultationTest(){
+    void eliminarTypeMedicalConsultationTest(){
         TypeMedicalConsultation consult = typeMedicalConsultationRepo.findById(1).orElse(null);
 
         //Luego lo eliminamos
@@ -48,7 +48,7 @@ public class TypeMedicalConsultationTest {
 
     @Test
     @Sql("classpath:TypeMedicalConsultations.sql")
-    public void actualizarTypeMedicalConsultationTest(){
+    void actualizarTypeMedicalConsultationTest(){
         //recuperamos el registro
         TypeMedicalConsultation guardado = typeMedicalConsultationRepo.findById(1).orElse(null);
 
@@ -65,7 +65,7 @@ public class TypeMedicalConsultationTest {
 
     @Test
     @Sql("classpath:TypeMedicalConsultations.sql")
-    public void listarTypeMedicalConsultationtest(){
+    void listarTypeMedicalConsultationtest(){
         //Obtenemos la lista de todos los usuarios
         List<TypeMedicalConsultation> lista = typeMedicalConsultationRepo.findAll();
 

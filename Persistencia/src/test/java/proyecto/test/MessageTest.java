@@ -34,7 +34,7 @@ private MessageRepo messageRepo;
 
 
     @Test
-    public void registrarMessageTest(){
+    void registrarMessageTest(){
 
         User user = new User();
         user.setName("Andres carrillo");
@@ -79,10 +79,9 @@ private MessageRepo messageRepo;
         Assertions.assertNotNull(m2);
     }
 
-
     @Test
     @Sql("classpath:Message.sql")
-    public void eliminarMessageTest(){
+    void eliminarMessageTest(){
 
         messageRepo.deleteById(1);
         Message m = messageRepo.findById(1).orElse(null);
@@ -91,7 +90,7 @@ private MessageRepo messageRepo;
 
     @Test
     @Sql("classpath:Message.sql")
-    public void actualizarMessageTest() {
+    void actualizarMessageTest() {
 
         Message m = messageRepo.findById(1).orElse(null);
 
@@ -108,7 +107,7 @@ private MessageRepo messageRepo;
 
     @Test
     @Sql("classpath:Message.sql")
-    public void listarMessageTestSql(){
+    void listarMessageTestSql(){
 
         List<Message> listaMessage=messageRepo.findAll();
 

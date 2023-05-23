@@ -19,7 +19,7 @@ public class ProductTest {
     private ProductRepo productRepo;
 
     @Test
-    public void registrarProductTest(){
+    void registrarProductTest(){
 
         Product product = new Product(
                 1,
@@ -36,7 +36,7 @@ public class ProductTest {
     }
 
     @Test
-    public void eliminarProductTest(){
+    void eliminarProductTest(){
         Product product = new Product(
                 1,
                 "ibuprofeno",
@@ -56,7 +56,7 @@ public class ProductTest {
     }
 
     @Test
-    public void actualizarProductTest() {
+    void actualizarProductTest() {
         Product product = new Product(
                 1,
                 "ibuprofeno",
@@ -79,7 +79,7 @@ public class ProductTest {
     }
 
     @Test
-    public void listarProductsTest(){
+    void listarProductsTest(){
 
         Product product = new Product(
                 1,

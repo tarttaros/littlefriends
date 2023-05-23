@@ -19,7 +19,7 @@ public class AdministradorTest {
     private AdminRepo adminRepo;
 
     @Test
-    public void registrarAdminTest(){
+    void registrarAdminTest(){
 
         Admin a = new Admin();
         a.setId(1);
@@ -32,7 +32,7 @@ public class AdministradorTest {
 
     @Test
     @Sql("classpath:Administrador.sql")
-    public void eliminarAdminTest(){
+    void eliminarAdminTest(){
 
         adminRepo.deleteById(1);
         Admin a = adminRepo.findById(1).orElse(null);
@@ -42,7 +42,7 @@ public class AdministradorTest {
 
     @Test
     @Sql("classpath:Administrador.sql")
-    public void actualizarAdminTest(){
+    void actualizarAdminTest(){
 
         Admin a = adminRepo.findById(1).orElse(null);
 
@@ -58,7 +58,7 @@ public class AdministradorTest {
 
     @Test
     @Sql("classpath:Administrador.sql")
-    public void listarAdminTest(){
+    void listarAdminTest(){
 
         //Obtenemos la lista de todos los usuarios
         List<Admin> lista = adminRepo.findAll();

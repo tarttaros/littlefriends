@@ -37,7 +37,7 @@ public class ConsultationTest {
     private ConsultationRepo consultationRepo;
 
     @Test
-    public void registrarConsultationTest(){
+    void registrarConsultationTest(){
 
         User user = new User();
         user.setName("Andres carrillo");
@@ -110,7 +110,7 @@ public class ConsultationTest {
 
     @Test
     @Sql("classpath:Consultations.sql")
-    public void eliminarConsultationTest(){
+    void eliminarConsultationTest(){
         Consultation consult = consultationRepo.findById(1).orElse(null);
 
         //Luego lo eliminamos
@@ -123,7 +123,7 @@ public class ConsultationTest {
 
     @Test
     @Sql("classpath:Consultations.sql")
-    public void actualizarConsultationTest(){
+    void actualizarConsultationTest(){
 
         //recuperamos el registro
         Consultation guardado = consultationRepo.findById(1).orElse(null);
@@ -141,7 +141,7 @@ public class ConsultationTest {
 
     @Test
     @Sql("classpath:Consultations.sql")
-    public void listarConsultationTest() {
+    void listarConsultationTest() {
         //Obtenemos la lista de todos los usuarios
         List<Consultation> lista = consultationRepo.findAll();
 

@@ -30,7 +30,7 @@ public class VeterinaryCareTest {
     private PetRepo petRepo;
 
     @Test
-    public void registrarVeterinaryCareTest(){
+    void registrarVeterinaryCareTest(){
 
         User user = new User();
         user.setName("Andres carrillo");
@@ -84,7 +84,7 @@ public class VeterinaryCareTest {
 
     @Test
     @Sql("classpath:VeterinaryCares.sql")
-    public void eliminarVeterinaryCareTest(){
+    void eliminarVeterinaryCareTest(){
         VeterinaryCare consult = veterinaryCareRepo.findById(1).orElse(null);
 
         //Luego lo eliminamos
@@ -97,7 +97,7 @@ public class VeterinaryCareTest {
 
     @Test
     @Sql("classpath:VeterinaryCares.sql")
-    public void actualizarVeterinaryCareTest(){
+    void actualizarVeterinaryCareTest(){
 
         //recuperamos el registro
         VeterinaryCare guardado = veterinaryCareRepo.findById(1).orElse(null);
@@ -115,7 +115,7 @@ public class VeterinaryCareTest {
 
     @Test
     @Sql("classpath:VeterinaryCares.sql")
-    public void listarVeterinaryCaretest() {
+    void listarVeterinaryCaretest() {
         //Obtenemos la lista de todos los usuarios
         List<VeterinaryCare> lista = veterinaryCareRepo.findAll();
 

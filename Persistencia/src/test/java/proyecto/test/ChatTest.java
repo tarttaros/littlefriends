@@ -30,7 +30,7 @@ public class ChatTest {
     private VeterinaryRepo veterinaryRepo;
 
     @Test
-    public void registrarChatTest(){
+    void registrarChatTest(){
         User user = new User();
         user.setName("Andres carrillo");
         user.setPhoneNumber("3138545796");
@@ -71,7 +71,7 @@ public class ChatTest {
 
     @Test
     @Sql("classpath:Chats.sql")
-    public void eliminarChatTest(){
+    void eliminarChatTest(){
         Chat consult = chatRepo.findById(1).orElse(null);
 
         //Luego lo eliminamos
@@ -84,7 +84,7 @@ public class ChatTest {
 
     @Test
     @Sql("classpath:Chats.sql")
-    public void actualizarChatTest(){
+    void actualizarChatTest(){
         //recuperamos el registro
         Chat guardado = chatRepo.findById(1).orElse(null);
 
@@ -103,7 +103,7 @@ public class ChatTest {
 
     @Test
     @Sql("classpath:Chats.sql")
-    public void listarChatTest() {
+    void listarChatTest() {
         //Obtenemos la lista de todos los usuarios
         List<Chat> lista = chatRepo.findAll();
 

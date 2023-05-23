@@ -26,7 +26,7 @@ public class PetTest {
     private PetRepo petRepo;
 
     @Test
-    public void registrarPetTest(){
+    void registrarPetTest(){
 
         User user = new User();
                 user.setName("Andres carrillo");
@@ -59,7 +59,7 @@ public class PetTest {
 
     @Test
     @Sql("classpath:Pets.sql")
-    public void eliminarPetTest(){
+    void eliminarPetTest(){
 
         Pet pet = petRepo.getPetByName("pepito");
 
@@ -73,7 +73,7 @@ public class PetTest {
 
     @Test
     @Sql("classpath:Pets.sql")
-    public void actualizarPetTest(){
+    void actualizarPetTest(){
 
         //Guardamos el registro
         Pet guardado = petRepo.getPetByName("luna");
@@ -91,7 +91,7 @@ public class PetTest {
 
     @Test
     @Sql("classpath:Pets.sql")
-    public void listarPetsTest(){
+    void listarPetsTest(){
 
         //Obtenemos la lista de todos los usuarios
         List<Pet> lista = petRepo.findAll();

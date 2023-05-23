@@ -21,7 +21,7 @@ public class PurchaseDetailTest {
     private PurchaseDetailRepo purchaseDetailRepo;
 
     @Test
-    public void registrarPurchaseDetailTest(){
+    void registrarPurchaseDetailTest(){
 
         PurchaseDetail pd=new PurchaseDetail();
         pd.setId(1);
@@ -34,7 +34,7 @@ public class PurchaseDetailTest {
 
     @Test
     @Sql("classpath:PurchaseDetails.sql")
-    public void eliminarPurchaseDetailTest(){
+    void eliminarPurchaseDetailTest(){
 
         purchaseDetailRepo.deleteById(1);
         PurchaseDetail pd= purchaseDetailRepo.findById(1).orElse(null);
@@ -44,7 +44,7 @@ public class PurchaseDetailTest {
 
     @Test
     @Sql("classpath:PurchaseDetails.sql")
-    public void actualizarPurchseDetailTestSql(){
+    void actualizarPurchseDetailTestSql(){
 
         PurchaseDetail pd=purchaseDetailRepo.findById(1).orElse(null);
 
@@ -60,7 +60,7 @@ public class PurchaseDetailTest {
 
     @Test
     @Sql("classpath:PurchaseDetails.sql")
-    public void listarPurchaseDetailTestSql(){
+    void listarPurchaseDetailTestSql(){
 
         List<PurchaseDetail> listaPurchaseDetails=purchaseDetailRepo.findAll();
 

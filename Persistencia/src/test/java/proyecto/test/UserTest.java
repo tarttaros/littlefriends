@@ -21,10 +21,8 @@ public class UserTest {
     @Autowired
     private UserRepo userRepo;
 
-
-
     @Test
-    public void registrarUsuarioTest(){
+    void registrarUsuarioTest(){
         User u = new User(
         "josh",
         "3108447302",
@@ -43,7 +41,7 @@ public class UserTest {
     }
 
     @Test
-    public void eliminarUsuarioTest(){
+    void eliminarUsuarioTest(){
         User u = new User(
                 "josh",
                 "3108447302",
@@ -66,7 +64,7 @@ public class UserTest {
     }
 
     @Test
-    public void actualizarUsuarioTest(){
+    void actualizarUsuarioTest(){
         User u = new User(
                 "josh",
                 "3108447302",
@@ -93,7 +91,7 @@ public class UserTest {
 
     @Test
     @Sql("classpath:Users.sql" )
-    public void listarUsuariosTest(){
+    void listarUsuariosTest(){
 
         //Obtenemos la lista de todos los usuarios
         List<User> lista = userRepo.findAll();

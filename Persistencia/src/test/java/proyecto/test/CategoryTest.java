@@ -19,7 +19,7 @@ public class CategoryTest {
     private CategoryRepo categoryRepo;
 
     @Test
-    public void registrarCategoryTest(){
+    void registrarCategoryTest(){
 
         Category cat = new Category(1,"Antialergico");
 
@@ -32,7 +32,7 @@ public class CategoryTest {
 
     @Test
     @Sql("classpath:Categories.sql")
-    public void eliminarCategoryTest(){
+    void eliminarCategoryTest(){
 
         Category guardado = categoryRepo.findByName("Antialergico");
 
@@ -46,7 +46,7 @@ public class CategoryTest {
 
     @Test
     @Sql("classpath:Categories.sql")
-    public void actualizarCategoryTest() {
+    void actualizarCategoryTest() {
 
         Category guardado = categoryRepo.findByName("Antialergico");
 
@@ -63,7 +63,7 @@ public class CategoryTest {
 
     @Test
     @Sql("classpath:Categories.sql")
-    public void listarCategoryTest(){
+    void listarCategoryTest(){
 
         //Obtenemos la lista de todos los usuarios
         List<Category> lista = categoryRepo.findAll();

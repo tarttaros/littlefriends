@@ -20,7 +20,7 @@ public class ExaminationTest {
     private ExaminationRepo examinationRepo;
 
     @Test
-    public void registrarPurchaseDetailTest(){
+    void registrarPurchaseDetailTest(){
 
         Examination e = new Examination();
         e.setId_examination(1);
@@ -33,7 +33,7 @@ public class ExaminationTest {
     }
     @Test
     @Sql("classpath:Examinations.sql")
-    public void eliminarExaminationTest(){
+    void eliminarExaminationTest(){
 
         examinationRepo.deleteById(1);
         Examination ex= examinationRepo.findById(1).orElse(null);
@@ -42,7 +42,7 @@ public class ExaminationTest {
 
     @Test
     @Sql("classpath:Examinations.sql")
-    public void actualizarPurchseDetailTestSql(){
+    void actualizarPurchseDetailTestSql(){
 
         Examination ex=examinationRepo.findById(1).orElse(null);
 
@@ -58,7 +58,7 @@ public class ExaminationTest {
 
     @Test
     @Sql("classpath:Examinations.sql")
-    public void listarPurchaseTestSql(){
+    void listarPurchaseTestSql(){
 
         List<Examination> listaExamination=examinationRepo.findAll();
 

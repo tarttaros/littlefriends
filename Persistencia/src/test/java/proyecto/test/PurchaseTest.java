@@ -26,9 +26,8 @@ public class PurchaseTest {
     @Autowired
     private PurchaseRepo purchaseRepo;
 
-
     @Test
-    public void registrarPurchaseTest(){
+    void registrarPurchaseTest(){
 
         Purchase p =new Purchase();
         p.setBuyDate(LocalDateTime.now());
@@ -38,7 +37,7 @@ public class PurchaseTest {
     }
     @Test
     @Sql("classpath:Purchases.sql")
-    public void eliminarPurchaseTest(){
+    void eliminarPurchaseTest(){
 
         purchaseRepo.deleteById(1);
         Purchase p= purchaseRepo.findById(1).orElse(null);
@@ -48,7 +47,7 @@ public class PurchaseTest {
 
     @Test
     @Sql("classpath:Purchases.sql")
-    public void actualizarPurchaseTestSql(){
+    void actualizarPurchaseTestSql(){
 
         Purchase p=purchaseRepo.findById(1).orElse(null);
 
@@ -64,7 +63,7 @@ public class PurchaseTest {
 
     @Test
     @Sql("classpath:Purchases.sql")
-    public void listarPurchaseTestSql(){
+    void listarPurchaseTestSql(){
 
         List<Purchase>listaPurchase=purchaseRepo.findAll();
 
