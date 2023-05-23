@@ -73,7 +73,7 @@ private MessageRepo messageRepo;
         Message m = new Message();
         m.setId(1);
         m.setDate(LocalDate.now());
-        m.setMessage("esto es un mensaje");
+        m.setContent("esto es un mensaje");
         m.setChat(guardado);
         Message m2=messageRepo.save(m);
         Assertions.assertNotNull(m2);
@@ -96,14 +96,14 @@ private MessageRepo messageRepo;
         Message m = messageRepo.findById(1).orElse(null);
 
         //Modificamos el nombre
-        m.setMessage("otro mensaje");
+        m.setContent("otro mensaje");
 
         //Con save guardamos el registro modificado
         messageRepo.save(m);
 
         //Por último, verificamos que si haya quedado actualizado
         Message m2 = messageRepo.findById(1).orElse(null);
-        Assertions.assertEquals("otro mensaje", m2.getMessage());
+        Assertions.assertEquals("otro mensaje", m2.getContent());
     }
 
     @Test
@@ -117,7 +117,7 @@ private MessageRepo messageRepo;
         {
             System.out.println(
                     consult.getId()+"\n"+
-                            consult.getMessage()+"\n"+
+                            consult.getContent()+"\n"+
                             consult.getDate());
         }
     }

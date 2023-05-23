@@ -8,6 +8,6 @@ insert into veterinary (id_veterinary,email,identification,name,password,phone_n
 insert into chat (id_chat,id_user,id_veterinary) values (1,1,1);
 insert into chat (id_chat,id_user,id_veterinary) values (2,2,2);
 
-insert into message (id_message,date,message,id_chat) values (1,"2023/5/21","holi",1);
-insert into message (id_message,date,message,id_chat) values (2,"2023/2/20","buenas",1);
-insert into message (id_message,date,message,id_chat) values (3,"2023/12/25","buenas tardes",2);
+insert into message (id_message,date,content,id_chat) values (1,"2023/5/21","holi",1);
+insert into message (id_message,date,content,id_chat) values (2,"2023/2/20","buenas",1);
+insert into message (id_message,date,content,id_chat) values (3,"2023/12/25","buenas tardes",2);
