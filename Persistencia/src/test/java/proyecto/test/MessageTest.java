@@ -19,7 +19,7 @@ import java.util.List;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-public class MessageTest {
+class MessageTest {
 
 @Autowired
 private MessageRepo messageRepo;
@@ -31,7 +31,6 @@ private MessageRepo messageRepo;
 
     @Autowired
     private VeterinaryRepo veterinaryRepo;
-
 
     @Test
     void registrarMessageTest(){

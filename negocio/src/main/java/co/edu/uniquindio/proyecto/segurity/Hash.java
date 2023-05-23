@@ -14,7 +14,7 @@ public class Hash {
     }
 
     public static Hash factory() {
-        // TODO: Complete the implementation or throw an UnsupportedOperationException.
+        // This is intentional
         return new Hash();
     }
 

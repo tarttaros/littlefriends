@@ -15,7 +15,7 @@ import java.util.List;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-public class VeterinaryCareTest {
+class VeterinaryCareTest {
 
     @Autowired
     private VeterinaryRepo veterinaryRepo;

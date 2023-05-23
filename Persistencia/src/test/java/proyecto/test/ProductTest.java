@@ -13,7 +13,7 @@ import java.util.List;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-public class ProductTest {
+class ProductTest {
 
     @Autowired
     private ProductRepo productRepo;
