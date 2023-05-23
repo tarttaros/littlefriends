@@ -9,7 +9,6 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.jdbc.Sql;
 import proyecto.entidades.Admin;
 import proyecto.repositorios.AdminRepo;
-
 import java.util.List;
 
 @DataJpaTest

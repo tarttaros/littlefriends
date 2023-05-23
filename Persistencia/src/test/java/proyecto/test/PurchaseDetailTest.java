@@ -71,6 +71,6 @@ public class PurchaseDetailTest {
                     consult.getId()+"\n"+
                             consult.getUnits()+"\n"+
                             consult.getPrice());
-}
+        }
     }
 }
