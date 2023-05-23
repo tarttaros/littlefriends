@@ -18,6 +18,6 @@ public class VeterinaryDTO implements Serializable {
     private String email;
     private Integer sex;
     private String password;
-    private String num_license;
+    private String numLicense;
 
 }
