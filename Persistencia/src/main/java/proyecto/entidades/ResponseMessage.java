@@ -6,13 +6,13 @@ import java.io.Serializable;
 
 public class ResponseMessage implements Serializable {
     @JsonbProperty("mensaje")
-    private final String responsemessage;
+    private final String message;
 
-    private ResponseMessage(String responsemessage) {
-        this.responsemessage = responsemessage;
+    private ResponseMessage(String message) {
+        this.message = message;
     }
 
-    public static ResponseMessage of(String responsemessage) {
-        return new ResponseMessage(responsemessage);
+    public static ResponseMessage of(String message) {
+        return new ResponseMessage(message);
     }
 }
