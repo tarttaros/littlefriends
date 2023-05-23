@@ -25,22 +25,22 @@ public class UserRestController {
     private VeterinaryService veterinaryService;
 
     @PostMapping("/user")
-    public ResponseEntity saveUser(@RequestBody Person user) throws Exception {
+    public ResponseEntity<User> saveUser(@RequestBody Person user) throws Exception {
         try {
             User u = userService.createUser(new User(user.getName(), user.getPhoneNumber(), user.getIdentification(), user.getEmail(),"",user.getSex(), Hash.factory().toSha1(user.getPassword()), LocalDateTime.now()));
             return ResponseEntity.ok(u);
         }catch (Exception e) {
-            return new ResponseEntity<String>(HttpStatus.EXPECTATION_FAILED);
+            return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);
         }
     }
 
     @GetMapping("/user")
-    public ResponseEntity listUser() throws Exception {
+    public ResponseEntity<List<User>> listUser() throws Exception {
         try {
             List<User> u = userService.listUsers();
             return ResponseEntity.ok(u);
         }catch (Exception e) {
-            return new ResponseEntity<String>(HttpStatus.EXPECTATION_FAILED);
+            return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);
         }
     }
 

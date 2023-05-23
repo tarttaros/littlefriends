@@ -3,6 +3,7 @@ package co.edu.uniquindio.proyecto.rest;
 import co.edu.uniquindio.proyecto.dtos.CategoryDTO;
 import co.edu.uniquindio.proyecto.entidades.Category;
 import co.edu.uniquindio.proyecto.servicios.CategoryService;
+import jakarta.ws.rs.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +21,7 @@ public class CategoryRestController {
     private CategoryService categoryService;
 
     @GetMapping("/category")
-    public ResponseEntity <List<Category>>searchCategories() throws Exception {
+    public ResponseEntity <List<Category>>searchCategories() throws NotFoundException {
         try {
             List<Category> cat = categoryService.findAll();
             return ResponseEntity.ok(cat);
