@@ -7,8 +7,6 @@ phases:
       - mvn clean install
   build:
     commands:
-      - echo Entered the test phase...
-      - mvn clean test
       - echo Entered the build phase...
       - mvn clean package
   post_build:
