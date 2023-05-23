@@ -5,6 +5,7 @@ import co.edu.uniquindio.proyecto.entidades.User;
 import org.springframework.stereotype.Service;
 import co.edu.uniquindio.proyecto.repositorios.UserRepo;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +25,7 @@ public class UserServiceImpl implements UserService {
         if (listPet.isPresent()) {
             return listPet.stream().collect(Collectors.toList());
         }
-        return null;
+        return Collections.emptyList();
     }
 
     @Override
