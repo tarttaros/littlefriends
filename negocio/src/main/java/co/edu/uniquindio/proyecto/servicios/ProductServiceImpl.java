@@ -36,17 +36,7 @@ public class ProductServiceImpl implements ProductService{
     public Product createProduct(Product product) {
         Product p = new Product(product.getNameProduct(),product.getDescription(),product.getQuantityProduct(),product.getPrice());
         Product result = productRepo.save(p);
-        /*
-        product.getUrlPhotos().forEach(url -> {
-            ProductImage pi = new ProductImage(url,result);
-            productImageRepo.save(pi);
-        });
 
-        product.getCategoryList().forEach(nameCat -> {
-            Category category = categoryRepo.findByName(nameCat);
-            ProductCategory productCategory = new ProductCategory(result,category);
-            productCategoryRepo.save(productCategory);
-        });*/
         return result;
     }
 
