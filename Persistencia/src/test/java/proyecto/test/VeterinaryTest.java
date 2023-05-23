@@ -1,6 +1,7 @@
 package proyecto.test;
 
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -90,6 +91,10 @@ public class VeterinaryTest {
     public void listarVeterinariosTest(){
         //Obtenemos la lista de todos los usuarios
         List<Veterinary> lista = veterinaryRepo.findAll();
+
+        // Verificamos que la lista no esté vacía
+        Assert.assertFalse("La lista de veterinarios está vacía", lista.isEmpty());
+
         //Imprimimos la lista
         System.out.println(lista);
     }

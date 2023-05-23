@@ -1,6 +1,7 @@
 package proyecto.test;
 
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +15,8 @@ import java.util.List;
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class AdministradorTest {
-@Autowired
-private AdminRepo adminRepo;
+    @Autowired
+    private AdminRepo adminRepo;
 
     @Test
     public void registrarAdminTest(){
@@ -61,6 +62,9 @@ private AdminRepo adminRepo;
 
         //Obtenemos la lista de todos los usuarios
         List<Admin> lista = adminRepo.findAll();
+
+        // Verificamos que la lista no esté vacía
+        Assert.assertFalse("La lista de administradores está vacía", lista.isEmpty());
 
         //Imprimimos la lista
         System.out.println(lista);

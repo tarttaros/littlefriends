@@ -1,7 +1,6 @@
 package proyecto.test;
 
-
-
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,28 +23,28 @@ import java.util.List;
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class PurchaseTest {
 
-@Autowired
-private PurchaseRepo purchaseRepo;
+    @Autowired
+    private PurchaseRepo purchaseRepo;
 
 
-@Test
-public void registrarPurchaseTest(){
+    @Test
+    public void registrarPurchaseTest(){
 
-Purchase p =new Purchase();
-p.setBuyDate(LocalDateTime.now());
-p.setPaymentMethod("credito");
-Purchase p2=purchaseRepo.save(p);
-Assertions.assertNotNull(p2);
-}
-@Test
-@Sql("classpath:Purchases.sql")
-public void eliminarPurchaseTest(){
+        Purchase p =new Purchase();
+        p.setBuyDate(LocalDateTime.now());
+        p.setPaymentMethod("credito");
+        Purchase p2=purchaseRepo.save(p);
+        Assertions.assertNotNull(p2);
+    }
+    @Test
+    @Sql("classpath:Purchases.sql")
+    public void eliminarPurchaseTest(){
 
-   purchaseRepo.deleteById(1);
-   Purchase p= purchaseRepo.findById(1).orElse(null);
-    Assertions.assertNull(p);
+        purchaseRepo.deleteById(1);
+        Purchase p= purchaseRepo.findById(1).orElse(null);
+        Assertions.assertNull(p);
 
-}
+    }
 
     @Test
     @Sql("classpath:Purchases.sql")
@@ -68,6 +67,9 @@ public void eliminarPurchaseTest(){
     public void listarPurchaseTestSql(){
 
         List<Purchase>listaPurchase=purchaseRepo.findAll();
+
+        // Verificamos que la lista no esté vacía
+        Assert.assertFalse("La lista de compras está vacía", listaPurchase.isEmpty());
 
         // for se usa para mostrar los datos guardados en la lista
         for(Purchase milistaPurchase:listaPurchase) {

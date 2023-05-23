@@ -3,6 +3,7 @@ proyecto\entidades\Examination.class
 proyecto\repositorios\TokenRepo.class
 proyecto\repositorios\UserRepo.class
 proyecto\repositorios\VeterinaryCareRepo.class
+proyecto\repositorios\ChatRepo.class
 proyecto\entidades\TypePet.class
 proyecto\repositorios\VeterinaryRepo.class
 proyecto\entidades\Chat.class
