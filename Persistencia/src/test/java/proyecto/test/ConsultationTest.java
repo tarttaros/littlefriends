@@ -141,7 +141,7 @@ public class ConsultationTest {
 
     @Test
     @Sql("classpath:Consultations.sql")
-    public void listarConsultationtest() {
+    public void listarConsultationTest() {
         //Obtenemos la lista de todos los usuarios
         List<Consultation> lista = consultationRepo.findAll();
 
