@@ -20,22 +20,22 @@ public class CategoryRestController {
     private CategoryService categoryService;
 
     @GetMapping("/category")
-    public ResponseEntity searchCategories() throws Exception {
+    public ResponseEntity <List<Category>>searchCategories() throws Exception {
         try {
             List<Category> cat = categoryService.findAll();
             return ResponseEntity.ok(cat);
         }catch (Exception e) {
-            return new ResponseEntity<String>(HttpStatus.EXPECTATION_FAILED);
+            return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);
         }
     }
 
     @PostMapping("/category")
-    public ResponseEntity saveCategories(@RequestBody Category cat) throws Exception {
+    public ResponseEntity<Category> saveCategories(@RequestBody Category cat) throws Exception {
         try {
             cat = categoryService.createCategory(cat);
             return ResponseEntity.ok(cat);
         }catch (Exception e) {
-            return new ResponseEntity<String>(HttpStatus.EXPECTATION_FAILED);
+            return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);
         }
     }
 }

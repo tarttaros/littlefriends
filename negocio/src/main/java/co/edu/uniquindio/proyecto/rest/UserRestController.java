@@ -44,31 +44,7 @@ public class UserRestController {
         }
     }
 
-    /*
-    @GetMapping("/login")
-    public ResponseEntity login(@RequestParam String email,@RequestParam String password){
-        try {
-            User user = userService.findByEmail(email);
-            if(user != null){
-                if(user.getPassword().equals(Hash.factory().toSha1(password))) {
-                    ResponseCookie springCookie = Cookies.factory().setCookieUser(Hash.factory().toSha1(user.getId().toString()));
-                    return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, springCookie.toString()).build();
-                }
-            }
-            Veterinary veterinary = veterinaryService.findByEmail(email);
-            if(veterinary != null){
-                if(veterinary.getPassword().equals(Hash.factory().toSha1(password))) {
-                    ResponseCookie springCookie = Cookies.factory().setCookieVeterinary(Hash.factory().toSha1(veterinary.getId().toString()));
-                    return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, springCookie.toString()).build();
-                }
-            }
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).header("message","Correo y contraseña incorrectos").build();
-        }catch (Exception e){
-            System.out.println(e);
-            return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).build();
-        }
-    }
-    */
+
 
 }
 

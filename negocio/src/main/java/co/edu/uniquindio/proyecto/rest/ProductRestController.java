@@ -21,31 +21,31 @@ public class ProductRestController {
     private ProductService productService;
 
     @PostMapping("/product")
-    public ResponseEntity saveProduct(@RequestBody Product product) throws Exception {
+    public ResponseEntity<Product> saveProduct(@RequestBody Product product) throws Exception {
         try {
             Product p = productService.createProduct(product);
             return ResponseEntity.ok(p);
         }catch (Exception e) {
-            return new ResponseEntity<String>(HttpStatus.EXPECTATION_FAILED);
+            return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);
         }
     }
 
     @GetMapping("/product")
-    public ResponseEntity listProduct() throws Exception {
+    public ResponseEntity<List<Product>> listProduct() throws Exception {
         try {
             List<Product> p = productService.findProducts();
             return ResponseEntity.ok(p);
         }catch (Exception e) {
-            return new ResponseEntity<String>(HttpStatus.EXPECTATION_FAILED);
+            return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);
         }
     }
 
     @GetMapping("/melo")
-    public ResponseEntity melo() throws Exception {
+    public ResponseEntity<String> melo() throws Exception {
         try {
             return ResponseEntity.ok("melo");
         }catch (Exception e) {
-            return new ResponseEntity<String>(HttpStatus.EXPECTATION_FAILED);
+            return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);
         }
     }
 }
