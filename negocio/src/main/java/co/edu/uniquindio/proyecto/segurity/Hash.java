@@ -6,7 +6,15 @@ import java.security.MessageDigest;
 public class Hash {
     public Hash() {
     }
-    public static Hash factory(){
+
+    /**
+     * Factory method for creating Hash instances.
+     *
+     * This method is currently empty because the implementation is not yet defined.
+     * Please complete the implementation or throw an UnsupportedOperationException.
+     */
+    public static Hash factory() {
+        // TODO: Complete the implementation or throw an UnsupportedOperationException.
         return new Hash();
     }
 
