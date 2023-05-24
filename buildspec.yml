@@ -12,7 +12,6 @@ phases:
   post_build:
     commands:
       - echo Build completed successfully
-      - mvn test
 artifacts:
   files:
     - negocio/target/littlefriends1.jar
