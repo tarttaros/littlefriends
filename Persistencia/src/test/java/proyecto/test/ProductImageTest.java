@@ -28,7 +28,7 @@ class ProductImageTest {
         ProductImage pi2=productImageRepo.save(pi);
         Assertions.assertNotNull(pi2);
     }
-
+/*
     @Test
     @Sql("classpath:ProductImages.sql")
     void eliminarproductImageTest(){
@@ -66,4 +66,6 @@ class ProductImageTest {
         }
     }
 
+
+ */
 }

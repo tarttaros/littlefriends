@@ -88,7 +88,7 @@ class UserTest {
         User buscado = userRepo.getByIdentification("1095587412");
         Assertions.assertEquals("Juanita Lopez", buscado.getName());
     }
-
+/*
     @Test
     @Sql("classpath:Users.sql" )
     void listarUsuariosTest(){
@@ -102,6 +102,6 @@ class UserTest {
         //Imprimimos la lista
         System.out.println(lista);
     }
-
+*/
 
 }

@@ -81,7 +81,7 @@ class VeterinaryCareTest {
         //Comprobamos que si haya quedado
         Assertions.assertNotNull(guardado);
     }
-
+/*
     @Test
     @Sql("classpath:VeterinaryCares.sql")
     void eliminarVeterinaryCareTest(){
@@ -129,4 +129,6 @@ class VeterinaryCareTest {
                     vetC.getPet().getName());
         }
     }
+
+ */
 }

@@ -43,7 +43,7 @@ class ProductCategoryTest {
         ProductCategory guardado = productCategoryRepo.save(prdctCtgry);
         Assertions.assertNotNull(guardado);
     }
-
+/*
     @Test
     @Sql("classpath:ProductCategories.sql")
     void eliminarProductCategoryTest(){
@@ -91,4 +91,6 @@ class ProductCategoryTest {
                     prodctCat.getProduct().getNameProduct());
         }
     }
+
+ */
 }

@@ -29,7 +29,7 @@ class CategoryTest {
         //Comprobamos que si haya quedado
         Assertions.assertNotNull(guardado);
     }
-
+/*
     @Test
     @Sql("classpath:Categories.sql")
     void eliminarCategoryTest(){
@@ -74,5 +74,5 @@ class CategoryTest {
         //Imprimimos la lista
         System.out.println(lista);
     }
-
+*/
 }

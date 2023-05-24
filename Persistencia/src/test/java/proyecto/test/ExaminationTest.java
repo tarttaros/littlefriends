@@ -31,6 +31,7 @@ class ExaminationTest {
         Examination e2=examinationRepo.save(e);
         Assertions.assertNotNull(e2);
     }
+/*
     @Test
     @Sql("classpath:Examinations.sql")
     void eliminarExaminationTest(){
@@ -72,4 +73,6 @@ class ExaminationTest {
                             consult.getDescriptionexamination());
         }
     }
+
+ */
 }

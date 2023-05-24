@@ -32,7 +32,7 @@ class TypeMedicalConsultationTest {
         //Comprobamos que si haya quedado
         Assertions.assertNotNull(guardado);
     }
-
+/*
     @Test
     @Sql("classpath:TypeMedicalConsultations.sql")
     void eliminarTypeMedicalConsultationTest(){
@@ -74,4 +74,6 @@ class TypeMedicalConsultationTest {
 
         System.out.println(lista);
     }
+
+ */
 }

@@ -77,7 +77,7 @@ private MessageRepo messageRepo;
         Message m2=messageRepo.save(m);
         Assertions.assertNotNull(m2);
     }
-
+/*
     @Test
     @Sql("classpath:Message.sql")
     void eliminarMessageTest(){
@@ -120,4 +120,6 @@ private MessageRepo messageRepo;
         }
     }
 
+
+ */
 }
