@@ -1,7 +1,7 @@
 package co.edu.uniquindio.proyecto.servicios;
 
 import co.edu.uniquindio.proyecto.entidades.Token;
-import co.edu.uniquindio.proyecto.repositorio.TokenRepo;
+import co.edu.uniquindio.proyecto.repositorios.TokenRepo;
 import org.springframework.stereotype.Service;
 
 import java.util.Calendar;
