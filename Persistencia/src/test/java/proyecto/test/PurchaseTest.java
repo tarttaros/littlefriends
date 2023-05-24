@@ -7,16 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.jdbc.Sql;
-import proyecto.entidades.Product;
 import proyecto.entidades.Purchase;
-import proyecto.entidades.PurchaseDetail;
-import proyecto.entidades.User;
 import proyecto.repositorios.PurchaseRepo;
-import proyecto.repositorios.UserRepo;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @DataJpaTest

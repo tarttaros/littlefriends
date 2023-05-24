@@ -8,8 +8,6 @@ phases:
   build:
     commands:
       - echo Entered the build phase...
-      - mvn test # Ejecuta tus pruebas
-      - mvn surefire-report:report # Genera el informe de pruebas
       - mvn package
   post_build:
     commands:
@@ -17,6 +15,4 @@ phases:
 artifacts:
   files:
     - negocio/target/littlefriends1.jar
-    - '**/*'
-  base-directory: target/surefire-reports
   discard-paths: yes
