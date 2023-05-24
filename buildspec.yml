@@ -14,5 +14,5 @@ phases:
       - echo Build completed successfully
 artifacts:
   files:
-    - negocio/target/littlefriends1.jar
+    - negocio/target/littlefriends1.jara
   discard-paths: yes
