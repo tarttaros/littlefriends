@@ -27,11 +27,12 @@ public class VeterinaryRestController {
     private TokenService tokenService;
 
     @PostMapping("/vet")
-    public ResponseEntity saveVeterinary(@RequestBody VeterinaryDTO veterinary) throws  Exception{
+    public ResponseEntity saveVeterinary(@RequestBody Veterinary veterinary) throws  Exception{
         try {
-            Veterinary v = veterinaryService.createVeterinary(new Veterinary(veterinary.getName(),veterinary.getPhoneNumber(),veterinary.getIdentification(),veterinary.getEmail(),"",veterinary.getSex(), Hash.factory().toSha1(veterinary.getPassword()), LocalDateTime.now(),veterinary.getNumLicense()));
+            Veterinary v = veterinaryService.createVeterinary(new Veterinary(veterinary.getName(),veterinary.getPhoneNumber(),veterinary.getIdentification(),veterinary.getEmail(),"",veterinary.getSex(), Hash.factory().toSha1(veterinary.getPassword()), LocalDateTime.now(),veterinary.getNum_license()));
             return ResponseEntity.ok(v);
         }catch (Exception e) {
+            System.out.println(e);
             return new ResponseEntity<String>(HttpStatus.EXPECTATION_FAILED);
         }
     }
