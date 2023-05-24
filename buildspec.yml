@@ -8,7 +8,8 @@ phases:
   build:
     commands:
       - echo Entered the build phase...
-      - mvn clean package
+      - mvn test
+      - mvn package
   post_build:
     commands:
       - echo Build completed successfully
