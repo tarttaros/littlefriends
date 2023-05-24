@@ -31,32 +31,20 @@ class PurchaseDetailTest {
         PurchaseDetail pd2 = purchaseDetailRepo.save(pd);
         Assertions.assertNotNull(pd2);
     }
-/*
-    @Test
-    void eliminarPurchaseDetailTest(){
-        PurchaseDetail pdt=new PurchaseDetail();
-        pdt.setId(1);
-        pdt.setPrice(25000.0);
-        pdt.setUnits(25);
 
-        PurchaseDetail pd2 = purchaseDetailRepo.save(pdt);
+    @Test
+    @Sql("classpath:PurchaseDetails.sql")
+    void eliminarPurchaseDetailTest(){
 
         purchaseDetailRepo.deleteById(1);
-
         PurchaseDetail pd= purchaseDetailRepo.findById(1).orElse(null);
         Assertions.assertNull(pd);
 
     }
 
     @Test
+    @Sql("classpath:PurchaseDetails.sql")
     void actualizarPurchseDetailTestSql(){
-
-        PurchaseDetail pdt=new PurchaseDetail();
-        pdt.setId(1);
-        pdt.setPrice(25000.0);
-        pdt.setUnits(25);
-
-        PurchaseDetail pd2 = purchaseDetailRepo.save(pdt);
 
         PurchaseDetail pd=purchaseDetailRepo.findById(1).orElse(null);
 
@@ -71,13 +59,8 @@ class PurchaseDetailTest {
     }
 
     @Test
+    @Sql("classpath:PurchaseDetails.sql")
     void listarPurchaseDetailTestSql(){
-        PurchaseDetail pdt=new PurchaseDetail();
-        pdt.setId(1);
-        pdt.setPrice(25000.0);
-        pdt.setUnits(25);
-
-        PurchaseDetail pd2 = purchaseDetailRepo.save(pdt);
 
         List<PurchaseDetail> listaPurchaseDetails=purchaseDetailRepo.findAll();
 
@@ -90,6 +73,4 @@ class PurchaseDetailTest {
                             consult.getPrice());
         }
     }
-
- */
 }

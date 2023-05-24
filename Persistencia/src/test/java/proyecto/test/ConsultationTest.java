@@ -107,7 +107,7 @@ class ConsultationTest {
         //Comprobamos que si haya quedado
         Assertions.assertNotNull(guardado);
     }
-/*
+
     @Test
     @Sql("classpath:Consultations.sql")
     void eliminarConsultationTest(){
@@ -160,6 +160,4 @@ class ConsultationTest {
                     consult.getPet().getName());
         }
     }
-
- */
 }

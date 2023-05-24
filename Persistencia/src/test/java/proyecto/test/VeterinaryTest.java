@@ -85,7 +85,7 @@ class VeterinaryTest {
         Veterinary buscado = veterinaryRepo.getByIdentification("1095587412");
         Assertions.assertEquals("Juanita Lopez", buscado.getName());
     }
-/*
+
     @Test
     @Sql("classpath:Veterinaries.sql" )
     void listarVeterinariosTest(){
@@ -98,6 +98,4 @@ class VeterinaryTest {
         //Imprimimos la lista
         System.out.println(lista);
     }
-
- */
 }

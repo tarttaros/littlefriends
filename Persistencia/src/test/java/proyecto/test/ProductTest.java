@@ -17,7 +17,7 @@ class ProductTest {
 
     @Autowired
     private ProductRepo productRepo;
-/*
+
     @Test
     void registrarProductTest(){
 
@@ -100,6 +100,4 @@ class ProductTest {
         //Imprimimos la lista
         System.out.println(lista);
     }
-
- */
 }

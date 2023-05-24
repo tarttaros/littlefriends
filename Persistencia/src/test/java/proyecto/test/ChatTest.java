@@ -68,7 +68,7 @@ class ChatTest {
         //Comprobamos que si haya quedado
         Assertions.assertNotNull(guardado);
     }
-/*
+
     @Test
     @Sql("classpath:Chats.sql")
     void eliminarChatTest(){
@@ -116,6 +116,4 @@ class ChatTest {
                     cht.getVeterinary().getName());
         }
     }
-
- */
 }

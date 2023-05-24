@@ -56,7 +56,7 @@ class PetTest {
         //Comprobamos que si haya quedado
         Assertions.assertNotNull(guardado);
     }
-/*
+
     @Test
     @Sql("classpath:Pets.sql")
     void eliminarPetTest(){
@@ -103,6 +103,4 @@ class PetTest {
         System.out.println(lista);
     }
 
-
- */
 }

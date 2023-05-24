@@ -35,7 +35,7 @@ class PurchaseTest {
         Purchase p2=purchaseRepo.save(p);
         Assertions.assertNotNull(p2);
     }
-    /*
+
     @Test
     @Sql("classpath:Purchases.sql")
     void eliminarPurchaseTest(){
@@ -77,7 +77,4 @@ class PurchaseTest {
         }
     }
 
-
-
-     */
 }

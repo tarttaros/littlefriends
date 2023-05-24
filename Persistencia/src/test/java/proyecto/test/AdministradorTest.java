@@ -29,7 +29,7 @@ class AdministradorTest {
         Admin a2=adminRepo.save(a);
         Assertions.assertNotNull(a2);
     }
-/*
+
     @Test
     @Sql("classpath:Administrador.sql")
     void eliminarAdminTest(){
@@ -69,6 +69,4 @@ class AdministradorTest {
         //Imprimimos la lista
         System.out.println(lista);
     }
-
- */
 }
