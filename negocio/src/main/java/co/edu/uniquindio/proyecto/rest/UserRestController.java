@@ -52,10 +52,10 @@ public class UserRestController {
         }
     }
 
-    @PostMapping(value = "/login-admin")
-    public ResponseEntity<?> createAuthenticationTokenAdmin(@RequestBody Credential authenticationRequest) throws Exception {
-        final Admin admin = authenticateAdmin(authenticationRequest);
-        Token token = new Token(admin.getEmail());
+    @PostMapping(value = "/login")
+    public ResponseEntity<?> createAuthenticationToken(@RequestBody Credential authenticationRequest) throws Exception {
+        final User user = authenticate(authenticationRequest);
+        Token token = new Token(user.getEmail());
         if(tokenService.findByPK(authenticationRequest.getEmail()) == null)
         {
             return ResponseEntity.ok(tokenService.inserToken(token));
@@ -66,10 +66,10 @@ public class UserRestController {
         }
     }
 
-    @PostMapping(value = "/login-vet")
-    public ResponseEntity<?> createAuthenticationTokenVet(@RequestBody Credential authenticationRequest) throws Exception {
-        final Veterinary vet = authenticateVet(authenticationRequest);
-        Token token = new Token(vet.getEmail());
+    @PostMapping(value = "/login-admin")
+    public ResponseEntity<?> createAuthenticationTokenAdmin(@RequestBody Credential authenticationRequest) throws Exception {
+        final Admin admin = authenticateAdmin(authenticationRequest);
+        Token token = new Token(admin.getEmail());
         if(tokenService.findByPK(authenticationRequest.getEmail()) == null)
         {
             return ResponseEntity.ok(tokenService.inserToken(token));
@@ -100,15 +100,7 @@ public class UserRestController {
         return admin;
     }
 
-    private Veterinary authenticateVet(Credential request) throws Exception {
-        Veterinary vet = null;
-        try {
-            vet = veterinaryService.findByEmailAndPassword(request.getEmail(), Hash.factory().toSha1(request.getPassword()));
-        } catch (Exception e) {
-            throw new Exception("VET_NOT_FOUND", e);
-        }
-        return vet;
-    }
+
 
 
 

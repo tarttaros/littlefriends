@@ -2,8 +2,11 @@ package co.edu.uniquindio.proyecto.rest;
 
 
 import co.edu.uniquindio.proyecto.dtos.VeterinaryDTO;
+import co.edu.uniquindio.proyecto.entidades.Credential;
+import co.edu.uniquindio.proyecto.entidades.Token;
 import co.edu.uniquindio.proyecto.entidades.Veterinary;
 import co.edu.uniquindio.proyecto.segurity.Hash;
+import co.edu.uniquindio.proyecto.servicios.TokenService;
 import co.edu.uniquindio.proyecto.servicios.VeterinaryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,6 +23,8 @@ public class VeterinaryRestController {
     @Autowired
     private VeterinaryService veterinaryService;
 
+    @Autowired
+    private TokenService tokenService;
 
     @PostMapping("/vet")
     public ResponseEntity<Veterinary> saveVeterinary(@RequestBody VeterinaryDTO veterinary) throws  Exception{
@@ -29,5 +34,29 @@ public class VeterinaryRestController {
         }catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);
         }
+    }
+
+    @PostMapping(value = "/login-vet")
+    public ResponseEntity<?> createAuthenticationTokenVet(@RequestBody Credential authenticationRequest) throws Exception {
+        final Veterinary vet = authenticateVet(authenticationRequest);
+        Token token = new Token(vet.getEmail());
+        if(tokenService.findByPK(authenticationRequest.getEmail()) == null)
+        {
+            return ResponseEntity.ok(tokenService.inserToken(token));
+        }
+        else {
+            tokenService.setToken(token.getEmail(),token.getExpirationDate(),token.getToken());
+            return ResponseEntity.ok(tokenService.findByPK(authenticationRequest.getEmail()));
+        }
+    }
+
+    private Veterinary authenticateVet(Credential request) throws Exception {
+        Veterinary vet = null;
+        try {
+            vet = veterinaryService.findByEmailAndPassword(request.getEmail(), Hash.factory().toSha1(request.getPassword()));
+        } catch (Exception e) {
+            throw new Exception("VET_NOT_FOUND", e);
+        }
+        return vet;
     }
 }
