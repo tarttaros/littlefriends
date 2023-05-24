@@ -5,6 +5,11 @@ phases:
     commands:
       - echo "Downloading application dependencies..."
       - mvn clean install
+      - export DB_HOST=awseb-e-aayt7je3zy-stack-awsebrdsdatabase-tacf5cpqq67q.chjttxjckwwy.us-east-2.rds.amazonaws.com
+      - export DB_PORT=3306
+      - export DB_NAME=littlefriendsdb
+      - export DB_USERNAME=root
+      - export DB_PASSWORD=123456789
   build:
     commands:
       - echo Entered the build phase...
