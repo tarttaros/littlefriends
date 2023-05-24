@@ -8,11 +8,11 @@ phases:
   build:
     commands:
       - echo Entered the build phase...
-      - mvn test
-      - mvn package
+      - mvn package -DskipTests
   post_build:
     commands:
       - echo Build completed successfully
+      - mvn test
 artifacts:
   files:
     - negocio/target/littlefriends1.jar
