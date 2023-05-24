@@ -21,12 +21,12 @@ public class ProductRestController {
     private ProductService productService;
 
     @PostMapping("/product")
-    public ResponseEntity<Product> saveProduct(@RequestBody Product product) throws Exception {
+    public ResponseEntity saveProduct(@RequestBody Product product) throws Exception {
         try {
             Product p = productService.createProduct(product);
             return ResponseEntity.ok(p);
         }catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.EXPECTATION_FAILED);
+            return new ResponseEntity<String>(HttpStatus.EXPECTATION_FAILED);
         }
     }
 
